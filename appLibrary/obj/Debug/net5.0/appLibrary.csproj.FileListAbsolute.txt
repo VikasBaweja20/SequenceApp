@@ -1,0 +1,12 @@
+C:\Users\vikas.baweja\source\repos\SequenceApp\appLibrary\bin\Debug\net5.0\appLibrary.deps.json
+C:\Users\vikas.baweja\source\repos\SequenceApp\appLibrary\bin\Debug\net5.0\appLibrary.dll
+C:\Users\vikas.baweja\source\repos\SequenceApp\appLibrary\bin\Debug\net5.0\ref\appLibrary.dll
+C:\Users\vikas.baweja\source\repos\SequenceApp\appLibrary\bin\Debug\net5.0\appLibrary.pdb
+C:\Users\vikas.baweja\source\repos\SequenceApp\appLibrary\obj\Debug\net5.0\appLibrary.csproj.AssemblyReference.cache
+C:\Users\vikas.baweja\source\repos\SequenceApp\appLibrary\obj\Debug\net5.0\appLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vikas.baweja\source\repos\SequenceApp\appLibrary\obj\Debug\net5.0\appLibrary.AssemblyInfoInputs.cache
+C:\Users\vikas.baweja\source\repos\SequenceApp\appLibrary\obj\Debug\net5.0\appLibrary.AssemblyInfo.cs
+C:\Users\vikas.baweja\source\repos\SequenceApp\appLibrary\obj\Debug\net5.0\appLibrary.csproj.CoreCompileInputs.cache
+C:\Users\vikas.baweja\source\repos\SequenceApp\appLibrary\obj\Debug\net5.0\appLibrary.dll
+C:\Users\vikas.baweja\source\repos\SequenceApp\appLibrary\obj\Debug\net5.0\ref\appLibrary.dll
+C:\Users\vikas.baweja\source\repos\SequenceApp\appLibrary\obj\Debug\net5.0\appLibrary.pdb
