@@ -5,13 +5,18 @@ COPY . .
 
 RUN dotnet restore
 
-WORKDIR /appLibrary.Tests
-COPY . .
+FROM build AS testrunner
+WORKDIR /appLibrary/appLibrary.Tests
+CMD ["dotnet", "test", "--logger:trx"]
 
-RUN dotnet restore
+# run the unit tests
+FROM build AS test
+WORKDIR /appLibrary/appLibrary.Tests
+RUN dotnet test --logger:trx
 
-# run tests on docker build
-RUN dotnet test
+FROM build AS publish
+WORKDIR /appLibrary/appLibrary.Tests
+RUN dotnet publish -c Release -o out
 
 # run tests on docker run
 ENTRYPOINT ["dotnet", "appLibrary.Tests.dll"]
