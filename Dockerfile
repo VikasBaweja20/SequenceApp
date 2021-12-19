@@ -8,4 +8,4 @@ RUN dotnet restore
 RUN dotnet test
 
 # run tests on docker run
-ENTRYPOINT ["dotnet", "appLibrary.Tests.dll"]
+CMD ["dotnet", "test"]
