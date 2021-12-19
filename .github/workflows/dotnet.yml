@@ -23,3 +23,26 @@ jobs:
       run: dotnet build --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
+      
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      id: aws_creds
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: us-east-1
+    - name: Login to ECR public
+      uses: docker/login-action@v1
+      with:
+         registry: public.ecr.aws
+    - name: Build, tag, and push image to Amazon ECR
+      env:
+         REPO : ${{ secrets.REPO_NAME }}
+         REGISTRY_NAME : ${{ secrets.REGISTRY_NAME}}
+         IMAGE_TAG: ${{ github.sha }}
+      run: |
+         docker build -t public.ecr.aws/$REGISTRY_NAME/$REPO:$IMAGE_TAG .
+         docker push public.ecr.aws/$REGISTRY_NAME/$REPO:$IMAGE_TAG
+    - name: Log out of Amazon ECR
+      if: always()
+      run: docker logout public.ecr.aws/$REGISTRY_NAME/
